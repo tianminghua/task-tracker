@@ -11,8 +11,8 @@ const serverUrl: string = "http://localhost:6060"
 export const environment = {
   production: false,
   auth: {
-    domain,
-    clientId,
+    process.env.domain,
+    process.env.clientId,
     redirectUri: window.location.origin,
   },
 };
