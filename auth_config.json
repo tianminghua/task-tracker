@@ -1,0 +1,6 @@
+{
+    "domain": "dev-rdmgbje3.us.auth0.com",
+    "clientId": "fKNvzxn5VWdMdpoA2avrYcfhnRoJsS4t",
+    "audience": "https://express.sample",
+    "serverUrl": "http://localhost:6060"
+}
