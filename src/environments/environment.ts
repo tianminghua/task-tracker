@@ -3,16 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 // import { domain, clientId } from '../../auth_config.json';
-export const domain: string = "dev-rdmgbje3.us.auth0.com"
-export const clientId: string = "fKNvzxn5VWdMdpoA2avrYcfhnRoJsS4t"
+const domain: string = "dev-rdmgbje3.us.auth0.com"
+const clientId: string = "fKNvzxn5VWdMdpoA2avrYcfhnRoJsS4t"
 const audience: string = "https://express.sample"
 const serverUrl: string = "http://localhost:6060"
 
 export const environment = {
   production: false,
   auth: {
-    process.env.domain,
-    process.env.clientId,
+    domain,
+    clientId,
     redirectUri: window.location.origin,
   },
 };

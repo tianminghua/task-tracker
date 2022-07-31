@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthModule } from '@auth0/auth0-angular';
-import { domain, clientId } from 'src/environments/environment';
+import { environment as env } from 'src/environments/environment';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from '@auth0/auth0-angular';
 
@@ -48,9 +48,7 @@ const appRoutes: Routes = [
     FormsModule,
     RouterModule.forRoot(appRoutes),
     AuthModule.forRoot({
-      domain,
-      clientId,
-      redirectUri: window.location.origin,
+      ...env.auth
     }),
   ],
   providers: [
